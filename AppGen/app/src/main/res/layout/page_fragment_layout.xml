@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:background="@drawable/page_layout_bg"
+    android:layout_marginBottom="10dip"
+    tools:context="fbhack.martaungureanu.appgen.PageLabelFragment">
+
+    <TextView
+        android:id="@+id/page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Login Page"
+        android:textSize="@dimen/welcome_text_size"
+        android:textColor="@android:color/white"/>
+    <ImageButton
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/plus_button_image"
+        android:layout_gravity="center"/>
+
+</FrameLayout>
