@@ -1,4 +1,4 @@
-package hackathon.fb.appgen;
+package fbhack.martaungureanu.appgen;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

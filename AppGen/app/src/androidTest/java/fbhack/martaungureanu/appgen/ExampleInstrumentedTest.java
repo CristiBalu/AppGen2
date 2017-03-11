@@ -1,4 +1,4 @@
-package hackathon.fb.appgen;
+package fbhack.martaungureanu.appgen;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("hackathon.fb.appgen", appContext.getPackageName());
+        assertEquals("fbhack.martaungureanu.appgen", appContext.getPackageName());
     }
 }

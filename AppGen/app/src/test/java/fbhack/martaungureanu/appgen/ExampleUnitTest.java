@@ -1,4 +1,4 @@
-package hackathon.fb.appgen;
+package fbhack.martaungureanu.appgen;
 
 import org.junit.Test;
 
