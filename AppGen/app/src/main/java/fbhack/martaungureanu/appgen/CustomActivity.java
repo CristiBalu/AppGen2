@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import java.util.HashMap;
 
+import fbhack.martaungureanu.appgen.utils.Model;
+
 public class CustomActivity extends AppCompatActivity {
     private CustomView view;
 
@@ -13,7 +15,7 @@ public class CustomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         view = new CustomView(getApplicationContext(),
-                (HashMap<String, String>) getIntent().getSerializableExtra("aspectMap"));
+                (Model) getIntent().getSerializableExtra("model"));
         setContentView(view);
     }
 }
