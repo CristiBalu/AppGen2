@@ -25,6 +25,9 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+        <activity android:name=".CustomActivity"
+                  android:launchMode="standard" >
+        </activity>
     </application>
 
 </manifest>

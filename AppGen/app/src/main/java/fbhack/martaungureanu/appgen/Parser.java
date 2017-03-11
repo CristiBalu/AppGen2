@@ -8,9 +8,9 @@ import java.util.Map;
  */
 
 public class Parser {
-    public static Map<String, String> parse(String input) {
+    public static HashMap<String, String> parse(String input) {
 
-        Map<String, String> attributesMap = new HashMap<>();
+        HashMap<String, String> attributesMap = new HashMap<>();
 
         String[] attributes = input.split("I want the");
         for(String attribute : attributes) {

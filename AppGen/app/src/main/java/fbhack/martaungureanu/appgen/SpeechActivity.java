@@ -16,6 +16,7 @@ import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 public class SpeechActivity extends AppCompatActivity {
     Button listenButton;
+    Button doneButton;
     String userInput;
 
     private final String NO_INPUT              = "";
@@ -34,6 +35,20 @@ public class SpeechActivity extends AppCompatActivity {
                 promptSpeechInput();
             }
         });
+
+        doneButton = (Button) findViewById(R.id.done_button);
+        doneButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startCustomActivity();
+            }
+        });
+    }
+
+    private void startCustomActivity() {
+        Intent intent = new Intent(this, CustomActivity.class);
+        intent.putExtra("aspectMap", Parser.parse("I want the background to be red. I want the text color to be white."));
+        startActivity(intent);
     }
 
     private void promptSpeechInput() {
@@ -61,7 +76,7 @@ public class SpeechActivity extends AppCompatActivity {
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     userInput += " " + result.get(0);
-                    Parser.parse("I want the background to be red. I want the text color to be white.");
+                    //Parser.parse("I want the background to be red. I want the text color to be white.");
                 }
                 break;
         }
