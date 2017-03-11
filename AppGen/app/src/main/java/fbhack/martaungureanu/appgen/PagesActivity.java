@@ -2,8 +2,12 @@ package fbhack.martaungureanu.appgen;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
@@ -19,14 +23,7 @@ public class PagesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pages_layout);
 
-        pageNames = new ArrayList<>(7);
-        pageNames.add("Signup Page");
-        pageNames.add("Login Page");
-        pageNames.add("Home Page");
-        pageNames.add("Edit Profile");
-        pageNames.add("Another Page");
-        pageNames.add("Logout Page");
-        pageNames.add("Thank You Page");
+        pageNames = new ArrayList<>(0);
         fragmentManager = getFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
 

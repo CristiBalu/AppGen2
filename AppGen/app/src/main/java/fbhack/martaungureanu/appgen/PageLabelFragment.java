@@ -1,5 +1,6 @@
 package fbhack.martaungureanu.appgen;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -33,8 +34,20 @@ public class PageLabelFragment extends Fragment {
             plusButton.setVisibility(View.INVISIBLE);
         }
 
+        view.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startSpeechActivity();
+            }
+        });
+
 
         return view;
+    }
+
+    private void startSpeechActivity() {
+        Intent intent = new Intent(getActivity(), SpeechActivity.class);
+        startActivity(intent);
     }
 
 }

@@ -18,13 +18,13 @@ public class HelloActivity extends AppCompatActivity {
         getStartedButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                startSpeechActivity();
+                startPagesActivity();
             }
         });
     }
 
-    public void startSpeechActivity() {
-        Intent intent = new Intent(this, SpeechActivity.class);
+    public void startPagesActivity() {
+        Intent intent = new Intent(this, PagesActivity.class);
         startActivity(intent);
     }
 }
