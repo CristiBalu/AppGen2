@@ -34,7 +34,7 @@
         android:textSize="@dimen/welcome_text_size"/>
 
     <Button
-        android:text="Get started!"
+        android:text="Get started"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"
