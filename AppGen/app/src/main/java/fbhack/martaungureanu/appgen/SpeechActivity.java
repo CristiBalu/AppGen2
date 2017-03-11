@@ -12,15 +12,21 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
+
 public class SpeechActivity extends AppCompatActivity {
     Button listenButton;
-    private final int REQ_CODE_SPEECH_INPUT = 100;
+    String userInput;
+
+    private final String NO_INPUT              = "";
+    private final int    REQ_CODE_SPEECH_INPUT = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_speech);
 
+        userInput = NO_INPUT;
         listenButton = (Button) findViewById(R.id.listen_button);
         listenButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -54,7 +60,8 @@ public class SpeechActivity extends AppCompatActivity {
                 if(resultCode == RESULT_OK && null != data) {
                     ArrayList<String> result = data
                             .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    Toast.makeText(getApplicationContext(), result.get(0), Toast.LENGTH_SHORT);
+                    userInput += " " + result.get(0);
+                    Parser.parse("I want the background to be red. I want the text color to be white.");
                 }
                 break;
         }
