@@ -10,6 +10,5 @@
         <item>input (plain text, password, email, date, number)</item>
         <item>list</item>
         <item>button (push, toggle, switch, radio)</item>
-        <item>image</item>
     </string-array>
 </resources>

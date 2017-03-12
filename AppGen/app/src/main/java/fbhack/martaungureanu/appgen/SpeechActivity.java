@@ -48,7 +48,7 @@ public class SpeechActivity extends AppCompatActivity {
 
     private void startCustomActivity() {
         Intent intent = new Intent(this, CustomActivity.class);
-        intent.putExtra("model", Parser.parse("I want the background to be green. I want the text color to be green. " +
+        intent.putExtra("model", Parser.parse("I want the background to be white. I want the text color to be green. " +
                 " I want the user to be able to introduce the password. I want the user to be able to press a button." +
                 "I want the user to be able to pick a date. I want the user to be able to turn notifications on. " +
                 "I want the user to be able to introduce his phone number."));

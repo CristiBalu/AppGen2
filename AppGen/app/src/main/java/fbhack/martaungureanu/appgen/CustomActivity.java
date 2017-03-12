@@ -25,7 +25,7 @@ public class CustomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         model = (Model) getIntent().getSerializableExtra("model");
-        view = new CustomView(getApplicationContext(), model);
+        view = new CustomView(getApplicationContext(), model, this);
         final boolean isNew = getIntent().getBooleanExtra("isNew", true);
 
         setContentView(view);
@@ -61,7 +61,7 @@ public class CustomActivity extends AppCompatActivity {
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         TextView textView = new TextView(this);
-        textView.setText("Click on an element to edit it. Swipe left when you are done.");
+        textView.setText("Long tap an element to edit it. Swipe left when you are done.");
         textView.setGravity(Gravity.CENTER_HORIZONTAL);
         textView.setTextSize(20);
         alertDialogBuilder.setView(textView);
