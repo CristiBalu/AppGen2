@@ -1,15 +1,18 @@
 package fbhack.martaungureanu.appgen;
 
+import android.support.v7.app.AppCompatActivity;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.view.Gravity;
+import android.widget.TextView;
 
 import fbhack.martaungureanu.appgen.utils.Model;
 
@@ -55,6 +58,16 @@ public class CustomActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        TextView textView = new TextView(this);
+        textView.setText("Click on an element to edit it. Swipe left when you are done.");
+        textView.setGravity(Gravity.CENTER_HORIZONTAL);
+        textView.setTextSize(20);
+        alertDialogBuilder.setView(textView);
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 
     private void restartPagesActivity(String name, boolean isNew) {
@@ -117,5 +130,6 @@ public class CustomActivity extends AppCompatActivity {
                 return false;
             }
         }
+
     }
 }
