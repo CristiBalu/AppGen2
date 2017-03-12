@@ -23,4 +23,15 @@
 
         </LinearLayout>
     </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Done"
+        android:layout_marginTop="15dp"
+        android:textSize="25dp"
+        android:background="@drawable/start_button"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@drawable/button_text_colour" />
 </LinearLayout>

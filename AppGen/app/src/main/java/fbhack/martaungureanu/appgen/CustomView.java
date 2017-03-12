@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.icu.text.MessagePattern;
 import android.text.InputType;
+import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;

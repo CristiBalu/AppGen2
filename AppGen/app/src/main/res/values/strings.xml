@@ -2,6 +2,9 @@
     <string name="app_name">AppGen</string>
     <string name="listen_button_text"></string>
     <string name="speech_not_supported">Speech not supported!</string>
+    <string name="new_fragment_dialog_title">Give a name to your new page!</string>
+    <string name="old_fragment_dialog_title">Editing finished!</string>
+    <string name="dialog_message">Please give a name to your prototype!</string>
     <string-array name="elements">
         <item>text</item>
         <item>input (plain text, password, email, date, number)</item>
